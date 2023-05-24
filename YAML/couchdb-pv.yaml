@@ -1,0 +1,45 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: couch-vol-0
+  labels:
+    volume: couch-volume
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 10.0.0.4
+    path: "/nfs_share/couchdb-0"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: couch-vol-1
+  labels:
+    volume: couch-volume
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 10.0.0.4
+    path: "/nfs_share/couchdb-1"
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: couch-vol-2
+  labels:
+    volume: couch-volume
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    server: 10.0.0.4
+    path: "/nfs_share/couchdb-2"
